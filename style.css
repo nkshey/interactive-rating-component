@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Overpass", sans-serif;
+}
+
+:root {
+   /* PRIMARY */
+   --orange: hsl(25, 97%, 53%);
+   --cyan: hsl(178, 100%, 50%);
+
+   /* NEUTRAL */
+   --white: hsl(0, 0%, 100%);
+   --light-gray: hsl(217, 12%, 63%);
+   --medium-gray: hsl(216, 12%, 54%);
+   --dark-blue: hsl(213, 19%, 18%);
+   --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-size: 1.6rem;
+   background-color: var(--very-dark-blue);
+   color: var(--white);
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100dvh;
+}
+
+main {
+   max-width: 32.7rem;
+   padding: 2.4rem;
+   padding-bottom: 3.2rem;
+   background: linear-gradient(
+      to bottom,
+      hsl(215, 20%, 17%),
+      hsl(215, 24%, 12%)
+   );
+
+   border-radius: 1.6rem;
+}
+
+.hidden {
+   display: none !important;
+}
+
+.star-container img {
+   width: 4rem;
+   padding: 1.3rem;
+   background-color: var(--dark-blue);
+   border-radius: 50%;
+
+   margin-bottom: 1.6rem;
+}
+
+.section-info h1 {
+   font-size: 2.4rem;
+
+   margin-bottom: 1rem;
+}
+
+.section-info p {
+   font-size: 1.4rem;
+   line-height: 2.2rem;
+   color: var(--light-gray);
+
+   margin-bottom: 2.4rem;
+}
+
+.section-rating ol {
+   list-style: none;
+
+   display: flex;
+   justify-content: space-between;
+
+   margin-bottom: 2.4rem;
+}
+
+.rating {
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+
+   font-size: 1.4rem;
+   font-weight: 700;
+   color: var(--medium-gray);
+
+   background-color: var(--dark-blue);
+
+   width: 4.2rem;
+   height: 4.2rem;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   border-radius: 50%;
+
+   transition: all 0.15s;
+}
+
+.rating:hover {
+   cursor: pointer;
+   color: var(--white);
+   background-color: var(--medium-gray);
+}
+
+.rating.selected,
+.rating.selected:hover,
+.rating.selected:active {
+   color: var(--white);
+   background-color: var(--orange);
+}
+
+button {
+   width: 100%;
+
+   font-size: 1.4rem;
+   font-weight: 700;
+   letter-spacing: 0.2rem;
+
+   color: var(--white);
+   background-color: var(--orange);
+
+   border: none;
+   border-radius: 100rem;
+
+   padding: 1.2rem;
+
+   transition: all 0.15s;
+}
+
+button:hover {
+   cursor: pointer;
+   color: var(--orange);
+   background-color: var(--white);
+}
+
+/* Styling Result */
+.result-container {
+   text-align: center;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   max-width: 32.7rem;
+   padding: 3.4rem 2.4rem 3.6rem 2.4rem;
+   background: linear-gradient(
+      to bottom,
+      hsl(215, 20%, 17%),
+      hsl(215, 24%, 12%)
+   );
+
+   border-radius: 1.6rem;
+}
+
+.result-container img {
+   width: 14.4rem;
+   margin-bottom: 2.4rem;
+}
+
+.result-container > p {
+   display: inline-block;
+
+   font-size: 1.4rem;
+   color: var(--orange);
+   background-color: var(--dark-blue);
+   padding: 0.6rem 1.2rem;
+   border-radius: 100rem;
+
+   margin-bottom: 2.4rem;
+}
+
+.section-thank-you h2 {
+   font-size: 2.4rem;
+   margin-bottom: 1rem;
+}
+
+.section-thank-you p {
+   font-size: 1.4rem;
+   color: var(--light-gray);
+}
+
+/* Responsivness for Desktop Devices */
+@media (min-width: 1440px) {
+   main {
+      max-width: 41.2rem;
+      padding: 3.2rem;
+      border-radius: 3.2rem;
+   }
+
+   .star-container img {
+      width: 4.8rem;
+      padding: 1.6rem;
+
+      margin-bottom: 3rem;
+   }
+
+   .section-info h1 {
+      font-size: 2.8rem;
+
+      margin-bottom: 0.7rem;
+   }
+
+   .section-info p {
+      font-size: 1.5rem;
+   }
+
+   .section-rating li {
+      font-size: 1.6rem;
+
+      width: 5rem;
+      height: 5rem;
+   }
+
+   .section-rating ol {
+      margin-bottom: 3.2rem;
+   }
+
+   button {
+      font-size: 1.5rem;
+   }
+
+   /* Styling Result */
+   .result-container {
+      max-width: 41.2rem;
+      padding: 4.5rem 3.8rem;
+   }
+
+   .result-container img {
+      width: 16.2rem;
+      margin-bottom: 3.2rem;
+   }
+
+   .result-container > p {
+      font-size: 1.5rem;
+
+      padding: 0.4rem 2rem;
+
+      margin-bottom: 3.2rem;
+   }
+
+   .section-thank-you h2 {
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+   }
+
+   .section-thank-you p {
+      font-size: 1.5rem;
+   }
+}
+
+/* Responsivness for Very Small Devices */
+@media (max-width: 336px) {
+   html {
+      font-size: 50%;
+      margin: 0 0.8rem;
+   }
+}
